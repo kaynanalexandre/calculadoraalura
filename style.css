@@ -1,0 +1,27 @@
+body{
+    background-color: #191720;
+    color: white;
+    text-align: center;
+}
+.numeros{
+    width: 70px;
+    height: 50px;
+}
+table{
+    margin: auto;
+    text-align: center;
+}
+#camp0{
+    margin: auto;
+    background-color: white;
+    color: black;
+    width: 290px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+#result{
+    background-color: rgb(61, 61, 228);
+    color: white;
+    border-color: blue;
+}

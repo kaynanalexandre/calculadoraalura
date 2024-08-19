@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcladora</title>
+    <style>
+        body{
+    background-color: #191720;
+    color: white;
+    text-align: center;
+}
+.numeros{
+    width: 70px;
+    height: 50px;
+}
+table{
+    margin: auto;
+    text-align: center;
+}
+#camp0{
+    margin: auto;
+    background-color: white;
+    color: black;
+    width: 290px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+#result{
+    background-color: rgb(61, 61, 228);
+    color: white;
+    border-color: blue;
+}
+    </style>
+</head>
+<body>
+    <div> <!--divisão da calculadora-->
+        <h1>Calculadora</h1>
+        <div id="camp0"><p id="camp"></p></div> <!--campo dos números-->
+        <table>
+            <tr>
+                <td><input class="numeros" type="button" value="1" onclick="init('1')"></td>
+                <td><input class="numeros" type="button" value="2" onclick="init('2')"></td>
+                <td><input class="numeros" type="button" value="3" onclick="init('3')"></td>
+                <td><input class="numeros" type="button" value="+" onclick="init('+')"></td>
+            </tr>
+            <tr>
+                <td><input class="numeros" type="button" value="4" onclick="init('4')"></td>
+                <td><input class="numeros" type="button" value="5" onclick="init('5')"></td>
+                <td><input class="numeros" type="button" value="6" onclick="init('6')"></td>
+                <td><input class="numeros" type="button" value="-" onclick="init('-')"></td>
+            </tr>
+            <tr>
+                <td><input class="numeros" type="button" value="7" onclick="init('7')"></td>
+                <td><input class="numeros" type="button" value="8" onclick="init('8')"></td>
+                <td><input class="numeros" type="button" value="9" onclick="init('9')"></td>
+                <td><input class="numeros" type="button" value="÷/" onclick="init('/')"></td>
+            </tr>
+            <tr>
+                <td><input class="numeros" type="button" value="0" onclick="init('0')"></td>
+                <td><input class="numeros" type="button" value="." onclick="init('.')"></td>
+                <td><input id="result" class="numeros" type="button" value="=" onclick="calc()"></td>
+                <td><input class="numeros" type="button" value="x" onclick="init('*')"></td>
+            </tr>
+            <tr>
+                <td><input class="numeros" type="button" value="Limpar" onclick="limpar()"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function init(num){ ///adiciona os números no campo
+    let number = document.getElementById("camp").innerHTML;
+    document.getElementById("camp").innerHTML = number + num
+}
+function limpar(){/// retira o número do campo
+    var number = document.getElementById("camp").innerHTML;
+    document.getElementById('camp').innerHTML = number.substring(0, number.length -1) 
+}
+function calc() {///calcula o campo
+    camp = document.getElementById("camp").innerHTML;
+    document.getElementById("camp").innerHTML = eval(camp)
+}
+window.alert('calculadora teste alura"')
+    </script>
+</body>
+</html>

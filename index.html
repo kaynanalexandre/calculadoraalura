@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>calcladora</title>
+</head>
+<body>
+    <div> <!--divisão da calculadora-->
+        <h1>Calculadora</h1>
+        <div id="camp0"><p id="camp"></p></div> <!--campo dos números-->
+        <table>
+            <tr>
+                <td><input class="numeros" type="button" value="1" onclick="init('1')"></td>
+                <td><input class="numeros" type="button" value="2" onclick="init('2')"></td>
+                <td><input class="numeros" type="button" value="3" onclick="init('3')"></td>
+                <td><input class="numeros" type="button" value="+" onclick="init('+')"></td>
+            </tr>
+            <tr>
+                <td><input class="numeros" type="button" value="4" onclick="init('4')"></td>
+                <td><input class="numeros" type="button" value="5" onclick="init('5')"></td>
+                <td><input class="numeros" type="button" value="6" onclick="init('6')"></td>
+                <td><input class="numeros" type="button" value="-" onclick="init('-')"></td>
+            </tr>
+            <tr>
+                <td><input class="numeros" type="button" value="7" onclick="init('7')"></td>
+                <td><input class="numeros" type="button" value="8" onclick="init('8')"></td>
+                <td><input class="numeros" type="button" value="9" onclick="init('9')"></td>
+                <td><input class="numeros" type="button" value="÷/" onclick="init('/')"></td>
+            </tr>
+            <tr>
+                <td><input class="numeros" type="button" value="0" onclick="init('0')"></td>
+                <td><input class="numeros" type="button" value="." onclick="init('.')"></td>
+                <td><input id="result" class="numeros" type="button" value="=" onclick="calc()"></td>
+                <td><input class="numeros" type="button" value="x" onclick="init('*')"></td>
+            </tr>
+            <tr>
+                <td><input class="numeros" type="button" value="Limpar" onclick="limpar()"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
